@@ -11,6 +11,6 @@ void main(){
     }else if(c>a && c>b){
         printf("%d is greater.",c);
     } else {
-        printf("Please enter distnict numbers.");
+        printf("Please enter distnict numbers. ");
     }
 }
