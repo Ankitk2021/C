@@ -6,6 +6,6 @@ void main(){
         printf("This works.");
         if(a=10)
          printf("This works too.");
-         if(-5) printf("wow this works too.🤨");
+         if(-5) printf("wow this works too. 🤨");
          if('a') printf("Worked.");
 }
