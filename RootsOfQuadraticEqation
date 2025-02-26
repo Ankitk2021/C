@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+	// your code goes here
+	int a,b,c,r1,r2,D;
+	printf("cofficient of x2 ,x and constant term  : a , b , c enter please..\n");
+	scanf("%d %d %d",&a,&b,&c);
+	D = b*b - 4*(a*c);
+	
+	
+	if(a == 0 ) {
+	    
+	    printf("Not a quardatic equation ");
+	    return;
+	}
+	
+	if(D==0){
+	    r1 = r2 = -b/(2*a);
+	    
+	    printf("Both roots are real and same value %d ",r1);
+	    
+	} else if (D>0){
+	    
+	    r1 = ( -b - sqrt(D)) / (2*a);
+	      
+	    r2 = ( -b + sqrt(D)) / (2*a);
+	    
+	    printf("Both roots are real and distnict value %d and %d ",r1,r2);
+	    
+	} else {
+	    
+	    printf("Roots are imaginary \n");
+	}
+
+}
