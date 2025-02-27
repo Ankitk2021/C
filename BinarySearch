@@ -1,0 +1,46 @@
+
+int main() {
+	// your code goes here
+	
+	int arr[10], n , search , first , last , mid , i;
+	
+	printf("Please enter the number  of elements in the array \n ");
+	
+	scanf("%d",&n);
+	
+	printf("Enter values of elements in the array :\n");
+	
+	for(i=0;i<n;i++)
+	{
+	    scanf("%d",&arr[i]);
+	}
+	
+	printf("Please enter the element you want to search \n");
+	
+	scanf("%d",&search);
+	
+	first = 0 , last = n - 1;
+	
+	mid = (first + last)/2 ;
+	
+	while(first <= last){
+	    
+	    if(search == arr[mid] ){
+	        
+	       printf("Your search element %d found  at %d ",search , mid+1);
+	       return 0;
+	    } else if (search > arr[mid] ){
+	        
+	         first = mid + 1 ;
+	         mid = (first+last)/2 ;
+	         
+	    } else if (search < arr[mid] ){
+	        
+	        last = mid - 1 ;
+	        mid = (first+ last)/2 ;
+	    }
+	    
+	} 
+	    printf("Your search element %d not found :( ",search);
+	    return 0;
+}
