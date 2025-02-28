@@ -1,0 +1,47 @@
+#include <stdio.h>
+int main() {
+    int i,j,n ,sum = 0 ;
+
+	printf("Enetr order matrix n x n\n");
+	
+	scanf("%d",&n);
+	
+	int mat[n][n];
+	
+    printf("Enetr elements in matrix n x n....\n\n");
+	
+	for( i = 0;i<n;i++ ){
+	    printf("Enter elements of %d row \n", i+1);
+	    for(j = 0 ; j < n ; j++ ){
+	        
+	        scanf("%d",&mat[i][j]);
+	        
+	    }
+	}
+	
+	printf("\nYour matrix is :  \n");
+		for( i = 0;i<n;i++ ){
+	    
+	    for(j = 0 ; j < n ; j++ ){
+	        
+	        if(i==j){
+	            sum = sum + mat[j][j];
+	        }
+	        
+	    }
+	}
+			for( i = 0;i<n;i++ ){
+	    
+	    for(j = 0 ; j < n ; j++ ){
+	        
+	     printf("%d ",mat[i][j]);
+	        
+	    }
+	    
+	    printf("\n");
+	    
+	}
+	
+	printf("\nsum = %d ",sum);
+
+}
