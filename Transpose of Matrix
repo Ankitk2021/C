@@ -1,0 +1,64 @@
+
+#include <stdio.h>
+
+int main() {
+
+int n , i , j ;
+
+printf("Enter the order of matrix n x n \n");
+scanf("%d",&n);
+
+int arr[n][n];
+for(i=0;i<n;i++){
+    printf("Enter the elements of %d row ", i+1);
+    
+    for(j=0;j<n;j++){
+        
+        scanf("%d",&arr[i][j]);
+    }
+    
+    
+}
+
+printf("Your given is \n");
+for(i=0;i<n;i++) {
+    
+    for(j=0;j<n;j++){
+        
+       printf("%d ",arr[i][j]);
+    }
+    printf("\n");
+}
+
+
+
+for(i=0;i<n;i++) {
+    
+    for(j=0;j<n;j++){
+        
+        
+        //Most Important Line
+        
+     if(i>j){
+          int temp = arr[i][j];
+      arr[i][j] = arr[j][i];
+      arr[j][i] = temp;
+     }
+    }
+}
+
+printf("The transpose of matrix  is \n");
+for(i=0;i<n;i++) {
+    
+    for(j=0;j<n;j++){
+        
+       printf("%d ",arr[i][j]);
+    }
+    printf("\n");
+}
+
+
+
+
+
+}
